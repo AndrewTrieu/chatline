@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f4f4;
+}
+
+.wrapper {
+  background: #fff;
+  width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.3),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+/* Form */
+
+.form {
+  padding: 25px 30px;
+}
+
+.form header {
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.form form {
+  margin: 20px 0;
+}
+
+.form form .error {
+  color: #721c24;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 10px;
+}
+
+.form form .names {
+  display: flex;
+}
+
+.form .names .field:first-child {
+  margin-right: 10px;
+}
+
+.form .names .field:last-child {
+  margin-left: 10px;
+}
+
+.form form .field {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  position: relative;
+}
+
+.form form .field label {
+  margin-bottom: 2px;
+}
+
+.form form .field input {
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline-color: #333;
+}
+
+.form form .image {
+  margin-bottom: 10px;
+}
+
+.form form .image input {
+  font-size: 17px;
+}
+
+.form form .button input {
+  height: 45px;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  background: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 13px;
+  width: 100%;
+}
+
+.form form .field i {
+  position: absolute;
+  right: 15px;
+  top: 70%;
+  color: #ccc;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.form form .field i.active::before {
+  color: #333;
+  content: "\f070";
+}
+
+.form .link {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 17px;
+}
+
+.form .link a {
+  color: #333;
+}
+
+.form .link a:hover {
+  text-decoration: underline;
+}
+
+/* Home area */
+.user {
+  padding: 25px 30px;
+}
+
+.user header,
+.users a {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+}
+
+.wrapper img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+:is(.user, .users) .content {
+  display: flex;
+  align-items: center;
+}
+
+.user header .content img {
+  width: 50px;
+  height: 50px;
+}
+
+:is(.user, .users) .details {
+  margin-left: 15px;
+  align-items: center;
+  color: #333;
+}
+
+.user header .details span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.user header .logout {
+  color: #fff;
+  background: #333;
+  font-size: 17px;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.user .search {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.user .search .text {
+  font-size: 18px;
+}
+
+.user .search input.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.user .search input {
+  position: absolute;
+  height: 45px;
+  width: calc(100% - 50px);
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  font-size: 16px;
+  border-radius: 40px 0 0 40px;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.user .search button.active {
+  color: #fff;
+  background: #333;
+  outline: none;
+  border-radius: 0 40px 40px 0;
+}
+
+.user .search button {
+  width: 45px;
+  height: 45px;
+  border-radius: 40px;
+  border: none;
+  outline: 1px solid #ccc;
+  cursor: pointer;
+  color: #333;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.users {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.users a {
+  padding-right: 15px;
+  margin-bottom: 15px;
+  page-break-after: 10px;
+  border-bottom-color: #e6e6e6;
+}
+
+.users a .content img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.users a .content p {
+  color: #676767;
+}
+
+.users .details span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.users a .status-dot {
+  font-size: 12px;
+  color: forestgreen;
+}
+
+.users a .status-dot .offline {
+  font-size: 12px;
+  color: gray;
+}
+
+.users a:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+/* Chat area */
+.chat-area header {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.chat-area header img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+.chat-area header .back-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.chat-area header .details span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.chat-box {
+  max-height: 500px;
+  overflow-y: auto;
+  background: #f4f4f4;
+  padding: 10px 30px 20px 30px;
+  box-shadow: inset 0 32px 32px -32px rgba(0, 0, 0, 5%),
+    inset 0 -32px 32px -32px rgba(0, 0, 0, 5%);
+}
+
+.chat-box .chat {
+    margin: 15px 0;
+}
+
+.chat-box .chat p {
+    word-wrap: break-word;
+    padding: 10px 15px;
+    box-shadow: 0 32px 32px -32px rgba(0, 0, 0, 5%), 
+                0 -32px 32px -32px rgba(0, 0, 0, 5%);
+}
+
+.chat-box .post {
+    display: flex;
+}
+
+.post .details {
+    margin-left: auto   ;
+    max-width: calc(100% - 100px);
+}
+
+.post .details p {
+    background: #333;
+    color: #fff;
+    border-radius: 15px 15px 0 15px;
+    
+}
+
+.chat-box .get {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 15px;
+}
+
+.get img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.get .details {
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 100px);
+}
+
+.get .details p {
+    background: lightgray;
+    color: black;
+    border-radius: 15px 15px 15px 0;
+}
+
+.chat-area .message-input {
+  display: flex;
+  padding: 20px 30px;
+  justify-content: space-between;
+}
+
+.message-input input{
+  height: 40px;
+  width: calc(100% - 50px);
+  font-size: 15px;
+  border: 1px solid #ccc;
+  padding: 0 15px;
+  border-radius: 40px 0 0 40px;
+  outline: none;
+}
+
+.message-input button {
+  font-size: 20px;
+  width: 50px;
+  height: 40px;
+  border-radius: 0 40px 40px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  background: #333;
+}
