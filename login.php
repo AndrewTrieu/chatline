@@ -13,7 +13,7 @@
             <section class="register form">
                 <header>Login to ChatLine</header>
                 <form action="#" >
-                    <div class="error">Error</div>
+                    <div class="error"></div>
                     <div>
                         <div class="field">
                             <label>Email</label>
