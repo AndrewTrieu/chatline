@@ -30,8 +30,7 @@ CREATE TABLE `messages` (
   `msg_id` int(11) NOT NULL,
   `get_msg_id` int(255) NOT NULL,
   `post_msg_id` int(255) NOT NULL,
-  `msg` varchar(1000) NOT NULL,
-  `unique_id` int(255) NOT NULL
+  `msg` varchar(1000) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 -- --------------------------------------------------------
 --
@@ -57,7 +56,7 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `messages`
 ADD PRIMARY KEY (`msg_id`),
-  ADD KEY `FOREIGN` (`unique_id`) USING BTREE;
+  ADD KEY `FOREIGN` (`post_msg_id`) USING BTREE;
 --
 -- Indexes for table `users`
 --
@@ -86,7 +85,7 @@ MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
 -- Constraints for table `messages`
 --
 ALTER TABLE `messages`
-ADD CONSTRAINT `FOREIGN_MESSAGES_USERS` FOREIGN KEY (`unique_id`) REFERENCES `users` (`unique_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `FOREIGN_MESSAGES_USERS` FOREIGN KEY (`post_msg_id`) REFERENCES `users` (`unique_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
 ;

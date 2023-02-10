@@ -1,11 +1,11 @@
 <?php
-  $hostname = "localhost:3200";
-  $username = "root";
-  $password = "";
-  $dbname = "chatline";
+$hostname = "localhost:3200";
+$username = "root";
+$password = "";
+$dbname = "chatline";
 
-  $conn = mysqli_connect($hostname, $username, $password, $dbname);
-  if(!$conn){
-    echo "Database connection error".mysqli_connect_error();
-  }
+$conn = mysqli_connect($hostname, $username, $password, $dbname);
+if (!$conn) {
+  echo "Database connection error" . mysqli_connect_error();
+}
 ?>

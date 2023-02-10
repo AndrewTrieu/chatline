@@ -265,7 +265,7 @@ body {
   color: forestgreen;
 }
 
-.users a .status-dot .offline {
+.users a .status-dot.offline {
   font-size: 12px;
   color: gray;
 }
@@ -311,55 +311,54 @@ body {
 }
 
 .chat-box .chat {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 
 .chat-box .chat p {
-    word-wrap: break-word;
-    padding: 10px 15px;
-    box-shadow: 0 32px 32px -32px rgba(0, 0, 0, 5%), 
-                0 -32px 32px -32px rgba(0, 0, 0, 5%);
+  word-wrap: break-word;
+  padding: 10px 15px;
+  box-shadow: 0 32px 32px -32px rgba(0, 0, 0, 5%),
+    0 -32px 32px -32px rgba(0, 0, 0, 5%);
 }
 
 .chat-box .post {
-    display: flex;
+  display: flex;
 }
 
 .post .details {
-    margin-left: auto   ;
-    max-width: calc(100% - 100px);
+  margin-left: auto;
+  max-width: calc(100% - 100px);
 }
 
 .post .details p {
-    background: #333;
-    color: #fff;
-    border-radius: 15px 15px 0 15px;
-    
+  background: #333;
+  color: #fff;
+  border-radius: 15px 15px 0 15px;
 }
 
 .chat-box .get {
-    display: flex;
-    align-items: flex-end;
-    margin-top: 15px;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 15px;
 }
 
 .get img {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .get .details {
-    margin-left: 10px;
-    margin-right: auto;
-    max-width: calc(100% - 100px);
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100% - 100px);
 }
 
 .get .details p {
-    background: lightgray;
-    color: black;
-    border-radius: 15px 15px 15px 0;
+  background: lightgray;
+  color: black;
+  border-radius: 15px 15px 15px 0;
 }
 
 .chat-area .message-input {
@@ -368,7 +367,7 @@ body {
   justify-content: space-between;
 }
 
-.message-input input{
+.message-input input {
   height: 40px;
   width: calc(100% - 50px);
   font-size: 15px;
