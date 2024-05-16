@@ -10,9 +10,30 @@ ChatLine is a real-time messaging app that allows users to send and receive mess
 - User online/offline status
 - User last seen status
 
-## Deployment
+## Deployment to Heroku
 
-The app is deployed on Heroku. You can access the app [here](https://chatline-f5e4ccce6986.herokuapp.com/).
+The app is desgigned to be deployed on Heroku with ClearDB.
+
+1. Create an Heroku project
+2. Push the app to Heroku
+```bash
+heroku git:remote -a chatline && git push heroku main
+```
+3. Add a MySQL database with ClearDB
+4. Get ClearDB credentials, navigate to _Settings_ > _Config vars_. The URL is in the form:
+```bash
+mysql://<username>:<password>@<host>/heroku_3b61f10a737bcca?reconnect=true
+```
+5. Configure PHPMyAdmin to connect to ClearDB by modifying `~\xampp\phpMyAdmin\config.inc.php`:
+```php
+/* Heroku remote server */
+$i++;
+$cfg["Servers"][$i]["host"] = <host>;
+$cfg["Servers"][$i]["user"] = <username>;
+$cfg["Servers"][$i]["password"] = <password>;
+$cfg["Servers"][$i]["auth_type"] = "config";
+```
+6. Open the new Heroku server in PHPMyAdmin and import `chatline.sql`
 
 ## Local Setup
 
